@@ -9,36 +9,57 @@
   <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
   <link rel="stylesheet" href="http://webfonts.ru/import/arimo.css" type="text/css" media="screen" />
+  <link href="http://allfont.ru/css/?fonts=open-sans" rel="stylesheet" type="text/css" />
+  <link href="http://allfont.ru/css/?fonts=pt-sans" rel="stylesheet" type="text/css" />
+  <link href="http://webfonts.ru/import/barkentina.css" rel="stylesheet" type="text/css" />
+  <link href="http://webfonts.ru/import/arnamuserif.css" rel="stylesheet" type="text/css" />
+  <link href="http://webfonts.ru/import/gentium.css" rel="stylesheet" type="text/css" />
+  <link href="http://webfonts.ru/import/linlibslanted.css" rel="stylesheet" type="text/css" />
+  <link href="http://webfonts.ru/import/merriweather.css" rel="stylesheet" type="text/css" />
+  <link href="http://webfonts.ru/import/notoserif.css" rel="stylesheet" type="text/css" />
 </head>
-<body>
+<body class=''>
 
-  <div class="container">
-    <div class="header clearfix">
-      <nav>
-        <ul class="nav nav-pills pull-right">
-          <li role="presentation"><%= link_to "Главная", root_path %></li>
-          <% if logged_in? %>
-            <li role="presentation"><%= link_to "Мой профиль", current_user %></li>
-          <% end %>
-          <li role="presentation"><%= link_to "Педагоги", users_path %></li>
-          <li role="presentation">
-            <% if logged_in? %>
-              <%= link_to "Выход", signout_path %>
-            <% else %>
-              <%= link_to "Войти", signin_path %>
-            <% end %>
-          </li>
-        </ul>
-      </nav>
-      <h3 class="text-muted"><%= link_to "Дневник педагога", root_path %></h3>
+    <div id="top-menu-nav">
+        <%= link_to root_path do %>
+          <img class="hidden-xs" src="/images/logo.png" id="logo" data-pin-nopin="true">
+        <% end %>
+        <nav>
+          <a>Предметные</a>
+          <a>Развивающие</a>
+          <a>Игровые</a>
+        </nav>
     </div>
 
     <% flash.each do |key, value| %>
       <%= content_tag(:div, value, class: "alert alert-#{key}") %>
     <% end %>
 
-    <div class='wrapper'>
-      <%= yield %>
-  </div>
+    <div class='container'>
+      <div class='wrap-content'>
+        <%= yield %>
+      </div>
+    </div>
+
+    <div class='container'>
+      <div class="footer">
+        <div style="text-align: center;">
+          <ul class="list-inline">
+            <li>
+              <a title="Facebook" href="http://www.facebook.com/poraora"></a>
+            </li>
+            <li>
+              <a title="Twitter" href="http://twitter.com/poraora"></a>
+            </li>
+          </ul>
+          <hr>
+          <p>
+            <a href="/privacy.html" class="privLink">Договор оферта</a> <a href="/terms.html">Правила</a> <a href="/contact.html">Контакты</a>
+            <br>
+          </p>
+          <p>Организатор: <a href='http://ya-geniy.ru'>Я гений</a> (СМИ)</p>
+        </div>
+      </div>
+    </div>
 </body>
 </html>

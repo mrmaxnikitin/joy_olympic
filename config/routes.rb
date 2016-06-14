@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  root 'static_pages#welcome'
+  resources :users
+  resources :contests do
+    get 'participate', on: :member
+    resources :tasks
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

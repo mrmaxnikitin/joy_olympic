@@ -1,0 +1,21 @@
+<div class='slide contest-show'>
+	<!--<img class='contest-background-img' src='http://www.goldrhapsody.com/wp-content/uploads/2015/09/bigstock-Honey-and-Herbal-tea-on-wooden-67103101.jpg' /> -->
+	<div class='contest-content'>
+		<img src='<%= @contest.image %>' class='contest-image'/>
+		<h1 class='contest-title'><%= @contest.title %></h1>
+		<div class='statistic'>
+			Участники: <b class='participants'>213</b>
+			</br>
+			Оргвзнос: <b class='price'>200 рублей</b>
+			<%= link_to 'Принять участие!', participate_contest_path(@contest), class: 'btn btn-our btn-our-green' %>
+			<div class='clearboth'></div>
+		</div>
+		<p><%= @contest.description %></p>
+		<p class='more'>Подробнее...</p>
+		<div>
+			<%= link_to 'Изменить', edit_contest_path(@contest) %> |
+			<%= link_to 'Удалить', contest_path(@contest), method: :delete, data: {no_turbolink: true} %>
+		</div>
+	</div>
+	
+</div>
