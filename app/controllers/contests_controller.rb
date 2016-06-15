@@ -38,7 +38,11 @@ class ContestsController < ApplicationController
 	end
 
 	def participate
+	end
+	
+	def get_tasks
 		@tasks = @contest.tasks.all
+		render 'tasks/index', formats: :json
 	end
 
 	private
