@@ -7,12 +7,13 @@
 # Ignore bundler config.
 /.bundle
 /.byebug_history
-
+/.idea
 database.yml
 mailer.yml
 secrets.yml.erb
 secrets.yml
 database.yml.erb
+npm-debug.log*
 
 # Ignore all logfiles and tempfiles.
 /log/*
@@ -26,3 +27,6 @@ npm-debug.log
 
 # Generated js bundles
 /app/assets/webpack/*
+
+*.DS_Store
+config/deploy/test.rb

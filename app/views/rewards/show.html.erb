@@ -1,0 +1,24 @@
+<% 
+	if @reward.prize == 0
+		prize = "Участник"
+	else
+		prize = reward.prize.to_s + " место"
+	end 
+%>
+<div class='slide slide-reward'>
+	<div class='pinpen'></div>
+	<div class='reward-data'>
+		<img src='http://sprint-olympic.ru/image_diplomas/diploma3.jpg' />
+		<div class='participant'>
+			<h1><%= prize %></h1>
+			<h2><%= @reward.name %></h2>
+			<h4><%= @reward.age %></h4>
+			<h4><%= @reward.institution %></h4>
+		</div>
+		<div class='clearboth'></div>
+	</div>
+	<a id='buy-diploma' class='btn btn-our btn-our-green'>Приорести этот диплом за 100 рублей</a>
+	<div class='payment-form'>
+		Форма оплаты
+	</div>
+</div>

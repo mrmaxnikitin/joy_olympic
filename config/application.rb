@@ -8,6 +8,13 @@ Bundler.require(*Rails.groups)
 
 module Edugame
   class Application < Rails::Application
+
+    config.i18n.default_locale = :ru
+    config.time_zone = 'Europe/Moscow'
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.yml')]
+
+    config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+    config.action_mailer.delivery_method = :sendmail
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.

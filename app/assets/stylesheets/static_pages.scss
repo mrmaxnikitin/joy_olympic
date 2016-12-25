@@ -7,7 +7,7 @@
   background-image: url("http://www.ypanda.ru/assets/css/images/overlay.png"), url("http://www.ypanda.ru/assets/css/images/header.svg"), -webkit-linear-gradient(75deg, #8FE577 15%, #115F41 55%);
   background-image: url("http://www.ypanda.ru/assets/css/images/overlay.png"), url("http://www.ypanda.ru/assets/css/images/header.svg"), -ms-linear-gradient(75deg, #8FE577 15%, #115F41 55%);
   background-image: radial-gradient(circle farthest-side at 80% 10%, #4ABBE8, #1989CB);*/
-  padding: 6em 0 0 0;
+  padding: 3em 0 3em 0;
   background-image: linear-gradient(90deg, #E2E0CB 5%, #F4F3E8 45%);
   background-color: #F4F3E8;
   /*background-size: 128px 128px, 100% 100%, auto;
@@ -20,7 +20,7 @@
   width: 42%;
 }
 #slide-content1{
-    top: 22%;
+    top: 16%;
     left: 13%;
     width: 50%;
     color: #353535;
@@ -47,6 +47,7 @@
 	background-color: rgb(250, 249, 244);;
 	padding: 3em 0 5em 0;
 	text-align: center;
+	border-bottom: 1px solid #d4d4d4;
 	.col{
 		img{
 			width: 70px;
@@ -56,7 +57,7 @@
 			border-left: 1px solid #d4d4d4;
 			margin-top: 10px;
 			min-height: 125px;
-			text-align: left;
+			text-align: center;
 			p{
 				margin-top: 7px;
 			}
@@ -76,15 +77,28 @@
 	}
 }
 .olympics-home{
+	width: 90%;
+	margin: auto;
 	padding: 4em 0 0 0 !important;
 	div{
 		text-align: center;
 	}
 	img{
-		width: 90%;
+		width: 100%;
 		border-radius: 3px;
 		margin-bottom: 6px;
 	}
+	.col{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	h4{
+	  margin: 10px 0;
+	}
 }
-
+.instruction{
+	p{
+		font-size: 16px;
+	}
+}
 

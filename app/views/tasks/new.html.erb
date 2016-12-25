@@ -1,6 +1,8 @@
 <div class='section contest-new'>
-	  <h1 class='text-align-center title-on-page'>Создать новую олимпиаду</h1>
-	  <%= simple_form_for([@contest, @contest.tasks.build], url: contest_tasks_path(@contest), html: { class: 'form-vertical' }) do |f| %>
+	  <h1 class='text-align-center title-on-page'>Создать новый вопрос</h1>
+	  <%= simple_form_for(@task, url: tasks_path, html: { class: 'form-vertical' }) do |f| %>
+	  	<%= f.input :contest_id, label: "1-матем, 2-рус, 3-ангб 4-инф", input_html: { placeholder: 'id олимпиады' } %>
+	  	<%= f.input :classroom, label: false, input_html: { placeholder: 'Класс' } %>
 	    <%= f.input :text, label: false, input_html: { placeholder: 'Текст вопроса' } %>
 	    <%= f.input :var1, label: false, input_html: { placeholder: 'Вар 1' } %>
 	    <%= f.input :var2, label: false, input_html: { placeholder: 'Вар 2' } %>

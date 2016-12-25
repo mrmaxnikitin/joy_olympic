@@ -1,13 +1,24 @@
 Rails.application.routes.draw do
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   root 'static_pages#welcome'
   resources :users
+  resources :sessions, only: [:new, :create, :destroy]
+  resources :rewards
+  resources :games
+  resources :tasks
   resources :contests do
-    resources :tasks
     get 'participate', on: :member
     member do
       get :get_tasks
     end
   end
+
+  get 'honors' => 'static_pages#honors'
+  get 'instruction' => 'static_pages#instruction'
+  get 'logout' => 'sessions#destroy'
+  get 'signin' => 'sessions#new'
+  get 'signup' => 'users#new'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

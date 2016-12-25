@@ -18,10 +18,18 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'sorcery', '~> 0.9.1'
 gem 'simple_form'
 gem 'active_type'
+gem 'nokogiri'
 gem 'activeadmin', github: 'activeadmin'
+gem 'devise'
+gem 'russian'
+
+gem 'imagemagick-identify'
+gem 'paperclip'
+gem "mini_magick"
 
 gem 'react-rails'
 gem 'react-bootstrap-rails'
+gem 'better_errors'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -51,6 +59,7 @@ group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
   #for deploying
+
   gem 'capistrano'
   gem 'capistrano-rails-console'
   gem 'capistrano3-unicorn'
@@ -60,5 +69,10 @@ group :development do
   gem 'capistrano-rvm'
   gem 'guard-rails'
 
+end
+
+group :production do
+  gem 'unicorn'
+  gem 'unicorn-rails'
 end
 

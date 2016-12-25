@@ -41,7 +41,7 @@ class ContestsController < ApplicationController
 	end
 	
 	def get_tasks
-		@tasks = @contest.tasks.all
+		@tasks = @contest.tasks.where(classroom: params[:classroom])
 		render 'tasks/index', formats: :json
 	end
 

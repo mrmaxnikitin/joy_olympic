@@ -1,9 +1,18 @@
 class TasksController < ApplicationController
 
+  def new
+    @task = Task.new
+  end
+
 	def create
-    @contest = Contest.find(params[:contest_id])
-    @task = @contest.tasks.create(task_params)
-    redirect_to participate_contest_path(@contest)
+    @task = Task.new task_params
+    if @task.save
+      flash[:success] = "Успех"
+      redirect_to new_task_path
+    else
+      flash[:error] = "Хммм... Попробуйте еще раз!"
+      render 'new'
+    end
   end
 
   def index
@@ -16,6 +25,6 @@ class TasksController < ApplicationController
 
 	private
     def task_params
-      params.require(:task).permit(:text, :var1, :var2, :var3, :var4, :answer, :image, :background_color)
+      params.require(:task).permit(:contest_id, :classroom, :text, :var1, :var2, :var3, :var4, :answer, :image, :background_color)
     end
 end

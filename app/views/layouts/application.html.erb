@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Наше приложение</title>
+  <title>JoyAcademy</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <!--[if lt IE 9]>
   <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/buzz/1.2.0/buzz.min.js'></script>
   <link rel="stylesheet" href="http://webfonts.ru/import/arimo.css" type="text/css" media="screen" />
   <link href="http://allfont.ru/css/?fonts=open-sans" rel="stylesheet" type="text/css" />
   <link href="http://allfont.ru/css/?fonts=pt-sans" rel="stylesheet" type="text/css" />
@@ -20,14 +21,15 @@
 </head>
 <body class=''>
 
-    <div id="top-menu-nav">
+    <div id="site-hat">
         <%= link_to root_path do %>
-          <img class="hidden-xs" src="/images/logo.png" id="logo" data-pin-nopin="true">
+          <img class="hidden-xs" src="/images/logo-text.png" id="logo">
         <% end %>
         <nav>
-          <a>Предметные</a>
-          <a>Развивающие</a>
-          <a>Игровые</a>
+          <%= link_to 'Главная', root_path %>
+          <%= link_to 'Итоги', rewards_path %>
+          <%= link_to 'Награды', honors_path %>
+          <%= link_to 'Как принять участие?', instruction_path %>
         </nav>
     </div>
 
@@ -41,24 +43,14 @@
       </div>
     </div>
 
-    <div class='container'>
-      <div class="footer">
-        <div style="text-align: center;">
-          <ul class="list-inline">
-            <li>
-              <a title="Facebook" href="http://www.facebook.com/poraora"></a>
-            </li>
-            <li>
-              <a title="Twitter" href="http://twitter.com/poraora"></a>
-            </li>
-          </ul>
-          <hr>
-          <p>
-            <a href="/privacy.html" class="privLink">Договор оферта</a> <a href="/terms.html">Правила</a> <a href="/contact.html">Контакты</a>
-            <br>
-          </p>
-          <p>Организатор: <a href='http://ya-geniy.ru'>Я гений</a> (СМИ)</p>
-        </div>
+    <div class="footer">
+      <div class="tac mtl">
+        <hr>
+        <p>
+          <a href="/privacy.html" class="privLink">Договор оферта</a> <a href="/terms.html">Правила</a> <a href="/contact.html">Контакты</a>
+          <br>
+        </p>
+        <p>Организатор: <a href='http://ya-geniy.ru'>Я гений</a> (СМИ)</p>
       </div>
     </div>
 </body>
