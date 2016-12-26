@@ -1,4 +1,5 @@
 class TasksController < ApplicationController
+  before_action :require_admin, only: [:new, :create]
 
   def new
     @task = Task.new

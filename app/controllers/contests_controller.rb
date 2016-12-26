@@ -1,5 +1,6 @@
 class ContestsController < ApplicationController
 	before_action :find_contest, except: [:index, :new, :create]
+	before_action :require_admin, only: [:new, :create, :edit, :update, :destroy]
 
 	def index
 		@contests = Contest.all
@@ -33,8 +34,8 @@ class ContestsController < ApplicationController
 	end
 
 	def destroy
-		@contest.destroy
-    redirect_to contests_path
+		#@contest.destroy
+    #redirect_to contests_path
 	end
 
 	def participate
