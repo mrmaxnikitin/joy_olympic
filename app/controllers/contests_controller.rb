@@ -7,6 +7,7 @@ class ContestsController < ApplicationController
 	end
 
 	def show
+		@number_participants = Reward.where(contest_id: @contest.id).all.count
 	end
 
 	def new

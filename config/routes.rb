@@ -16,6 +16,7 @@ Rails.application.routes.draw do
 
   get 'honors' => 'static_pages#honors'
   get 'instruction' => 'static_pages#instruction'
+  get 'contacts' => 'static_pages#contacts'
   get 'logout' => 'sessions#destroy'
   get 'signin' => 'sessions#new'
   get 'signup' => 'users#new'
