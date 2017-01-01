@@ -3,7 +3,7 @@ class ContestsController < ApplicationController
 	before_action :require_admin, only: [:new, :create, :edit, :update, :destroy]
 
 	def index
-		@contests = Contest.all
+		@contests = Contest.order(created_at: "DESC").limit(3)
 	end
 
 	def show
@@ -43,7 +43,7 @@ class ContestsController < ApplicationController
 	end
 	
 	def get_tasks
-		@tasks = @contest.tasks.where(classroom: params[:classroom])
+		@tasks = @contest.tasks.where(classroom: params[:classroom]).order('RANDOM()').limit(10)
 		render 'tasks/index', formats: :json
 	end
 

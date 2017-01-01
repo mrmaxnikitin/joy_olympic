@@ -11,6 +11,7 @@ const TaskBox = React.createClass({
       num_current_task: 0,
       status_current_task: 0,   // 0 в процессе ответа, -1 неправильно, 1 правильно
       sum_right_answers: 0,
+      diploma_id: 0,
       reward: false
     };
   },
@@ -73,6 +74,11 @@ const TaskBox = React.createClass({
       status_current_task: 0
     });
   },
+  chooseDiploma: function(diploma_id){
+    this.setState({
+      diploma_id: diploma_id
+    });
+  },
   getReward: function(){
     var name_input = ReactDOM.findDOMNode(this.refs.name)
     var age_input = ReactDOM.findDOMNode(this.refs.age)
@@ -95,7 +101,8 @@ const TaskBox = React.createClass({
       institution: institution,
       prize: prize,
       score: this.state.sum_right_answers,
-      contest_id: this.state.tasks[0].contest_id
+      contest_id: this.state.tasks[0].contest_id,
+      number: this.state.diploma_id
     };
     $.ajax({
       url: '/rewards',
@@ -183,6 +190,16 @@ const TaskBox = React.createClass({
       var button_get_prize = <a className='btn btn-our btn-our-green'
                onClick={this.getReward}>Получить награду!</a>
 
+      var diploma_samples = [1,2,3,4,5,6,7,8,9,10].map(function (n) {
+        return (
+          <DiplomaSample
+          key={n}
+          item={n}
+          chooseDiploma={this.chooseDiploma}
+          diploma_id={this.state.diploma_id} />
+        );
+      }.bind(this));
+
       content = (
         <div className='participate-page'>
           <div className='participate-result animated bounceIn'>
@@ -193,15 +210,21 @@ const TaskBox = React.createClass({
                 <input className='tac' ref='name' type='text' placeholder='Электронная почта' />
               </div>
               <div>
-                <input className='tac' ref='name' type='text' placeholder='Фамилия и имя участника' />
+                <input className='tac' ref='name' type='text' placeholder='Фамилия и имя участника' maxlength="25" />
               </div>
               <div>
-                <input className='tac' ref='age' type='text' placeholder='Класс' />
+                <input className='tac' ref='age' type='text' placeholder='Класс' maxlength="40" />
               </div>
               <div>
-                <input className='tac' ref='institution' type='text' placeholder='Учебное заведение' />
+                <input className='tac' ref='institution' type='text' placeholder='Учебное заведение' maxlength="40" />
               </div>
             </div>
+            <div className='diploma-samples mbm'>
+              <h4>Выберите диплом</h4>
+              {diploma_samples}
+              <div className='clear'></div>
+            </div>
+            <div className='clear'></div>
             {button_get_prize}
           </div>
         </div>

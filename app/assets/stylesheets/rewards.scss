@@ -64,3 +64,25 @@
 		}
 	}
 }
+.img-diploma{
+	h1{
+		font-size: 120px;
+	}
+}
+.diploma-samples{
+	h4{
+		color: white;
+    margin-top: 50px;
+    margin-bottom: 10px;
+	}
+	img{
+		width: 33.3%;
+		padding: 10px;
+		max-width: 254px;
+		max-height: 351px;
+		cursor: pointer;
+	}
+	.emphasize{
+		background-color: #e76e30;
+	}
+}
