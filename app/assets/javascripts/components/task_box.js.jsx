@@ -6,7 +6,7 @@ const TaskBox = React.createClass({
   getInitialState: function () {
     return {
       complete_task: false,
-      tasks_count: 10,
+      tasks_count: 3,
       tasks: [],
       num_current_task: 0,
       status_current_task: 0,   // 0 в процессе ответа, -1 неправильно, 1 правильно
@@ -85,39 +85,44 @@ const TaskBox = React.createClass({
     var institution_input = ReactDOM.findDOMNode(this.refs.institution)
     var name = name_input.value.trim(), age = age_input.value.trim(), institution = institution_input.value.trim()
 
-    var prize
-    sum_wrong_answers = 15 - this.state.sum_right_answers
-    if(sum_wrong_answers == 0 || sum_wrong_answers == 1){
-      prize = 1
-    }else if(sum_wrong_answers == 2 || sum_wrong_answers == 3){
-      prize = 2
-    }else if(sum_wrong_answers == 4 || sum_wrong_answers == 5){
-      prize = 3
-    }else prize = 0
-    
-    reward = {
-      name: name,
-      age: age,
-      institution: institution,
-      prize: prize,
-      score: this.state.sum_right_answers,
-      contest_id: this.state.tasks[0].contest_id,
-      number: this.state.diploma_id
-    };
-    $.ajax({
-      url: '/rewards',
-      //dataType: 'json',
-      type: 'POST',
-      data: {reward: reward},
-      success: function(data) {
-        this.setState({
-          reward: true
-        });
-      }.bind(this),
-      error: function(xhr, status, err) {
-        //console.error(this.props.url, status, err.toString());
-      }.bind(this)
-    });
+    if(this.state.diploma_id && name.length && age.length && institution.length){
+
+      var prize
+      sum_wrong_answers = 15 - this.state.sum_right_answers
+      if(sum_wrong_answers == 0 || sum_wrong_answers == 1){
+        prize = 1
+      }else if(sum_wrong_answers == 2 || sum_wrong_answers == 3){
+        prize = 2
+      }else if(sum_wrong_answers == 4 || sum_wrong_answers == 5){
+        prize = 3
+      }else prize = 0
+      
+      reward = {
+        name: name,
+        age: age,
+        institution: institution,
+        prize: prize,
+        score: this.state.sum_right_answers,
+        contest_id: this.state.tasks[0].contest_id,
+        number: this.state.diploma_id
+      };
+      $.ajax({
+        url: '/rewards',
+        //dataType: 'json',
+        type: 'POST',
+        data: {reward: reward},
+        success: function(data) {
+          this.setState({
+            reward: true
+          });
+        }.bind(this),
+        error: function(xhr, status, err) {
+          //console.error(this.props.url, status, err.toString());
+        }.bind(this)
+      });
+    }else{
+      alert('Заполните все поля и выберите диплом!')
+    }
   },
   render: function() {
 
@@ -210,13 +215,13 @@ const TaskBox = React.createClass({
                 <input className='tac' ref='name' type='text' placeholder='Электронная почта' />
               </div>
               <div>
-                <input className='tac' ref='name' type='text' placeholder='Фамилия и имя участника' maxlength="25" />
+                <input className='tac' ref='name' type='text' placeholder='Фамилия и имя участника' maxLength="25" />
               </div>
               <div>
-                <input className='tac' ref='age' type='text' placeholder='Класс' maxlength="40" />
+                <input className='tac' ref='age' type='text' placeholder='Класс (возраст)' maxLength="44" />
               </div>
               <div>
-                <input className='tac' ref='institution' type='text' placeholder='Учебное заведение' maxlength="40" />
+                <input className='tac' ref='institution' type='text' placeholder='Учебное заведение' maxLength="44" />
               </div>
             </div>
             <div className='diploma-samples mbm'>
