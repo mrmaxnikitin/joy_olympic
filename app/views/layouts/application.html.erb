@@ -19,6 +19,7 @@
 
   <meta name="yandex-verification" content="44097bc71d796749" />
 
+  <%= render "partials/metrika" unless current_user.try(:admin?) %>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/buzz/1.2.0/buzz.min.js'></script>
   <link rel="stylesheet" href="http://webfonts.ru/import/arimo.css" type="text/css" media="screen" />
   <link href="http://allfont.ru/css/?fonts=open-sans" rel="stylesheet" type="text/css" />
