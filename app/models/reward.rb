@@ -3,7 +3,7 @@ class Reward < ActiveRecord::Base
   belongs_to :user
 
   def diploma_number1(position, prize)
-    
+    dnum = rand(100)
   	image = MiniMagick::Image.open("./public/original_diplomas/1.jpg")
     image.resize "1654x2339"
     image.format "jpg"
@@ -31,10 +31,13 @@ class Reward < ActiveRecord::Base
       c.pointsize '36'
       c.draw "text 0,2190 '№ #{self.id}'"
     end
-    image.write "./public/diplomas/diploma.jpg"
+    output_diploma = "./public/diplomas/diploma#{dnum}.jpg"
+    image.write output_diploma
+    return "/diplomas/diploma#{dnum}.jpg"
   end
 
   def diploma_number2(position, prize)
+    dnum = rand(100)
   	image = MiniMagick::Image.open("./public/original_diplomas/2.jpg")
     image.resize "1654x2339"
     image.format "jpg"
@@ -62,10 +65,13 @@ class Reward < ActiveRecord::Base
       c.pointsize '36'
       c.draw "text 0,2190 '№ #{self.id}'"
     end
-    image.write "./public/diplomas/diploma.jpg"
+    output_diploma = "./public/diplomas/diploma#{dnum}.jpg"
+    image.write output_diploma
+    return "/diplomas/diploma#{dnum}.jpg"
   end
 
   def diploma_number3(position, prize)
+    dnum = rand(100)
   	image = MiniMagick::Image.open("./public/original_diplomas/3.jpg")
     image.resize "1654x2339"
     image.format "jpg"
@@ -93,10 +99,13 @@ class Reward < ActiveRecord::Base
       c.pointsize '36'
       c.draw "text 30,2250 '№ #{self.id}'"
     end
-    image.write "./public/diplomas/diploma.jpg"
+    output_diploma = "./public/diplomas/diploma#{dnum}.jpg"
+    image.write output_diploma
+    return "/diplomas/diploma#{dnum}.jpg"
   end
 
   def diploma_number4(position, prize)
+    dnum = rand(100)
   	image = MiniMagick::Image.open("./public/original_diplomas/4.jpg")
     image.resize "1654x2339"
     image.format "jpg"
@@ -124,10 +133,13 @@ class Reward < ActiveRecord::Base
       c.pointsize '36'
       c.draw "text 0,2190 '№ #{self.id}'"
     end
-    image.write "./public/diplomas/diploma.jpg"
+    output_diploma = "./public/diplomas/diploma#{dnum}.jpg"
+    image.write output_diploma
+    return "/diplomas/diploma#{dnum}.jpg"
   end
 
   def diploma_number5(position, prize)
+    dnum = rand(100)
   	image = MiniMagick::Image.open("./public/original_diplomas/5.jpg")
     image.resize "1654x2339"
     image.format "jpg"
@@ -155,10 +167,13 @@ class Reward < ActiveRecord::Base
       c.pointsize '36'
       c.draw "text 0,2190 '№ #{self.id}'"
     end
-    image.write "./public/diplomas/diploma.jpg"
+    output_diploma = "./public/diplomas/diploma#{dnum}.jpg"
+    image.write output_diploma
+    return "/diplomas/diploma#{dnum}.jpg"
   end
 
   def diploma_number6(position, prize)
+    dnum = rand(100)
   	image = MiniMagick::Image.open("./public/original_diplomas/6.jpg")
     image.resize "1654x2339"
     image.format "jpg"
@@ -186,10 +201,13 @@ class Reward < ActiveRecord::Base
       c.pointsize '36'
       c.draw "text 0,2250 '№ #{self.id}'"
     end
-    image.write "./public/diplomas/diploma.jpg"
+    output_diploma = "./public/diplomas/diploma#{dnum}.jpg"
+    image.write output_diploma
+    return "/diplomas/diploma#{dnum}.jpg"
   end
 
   def diploma_number7(position, prize)
+    dnum = rand(100)
   	image = MiniMagick::Image.open("./public/original_diplomas/7.jpg")
     image.resize "1654x2339"
     image.format "jpg"
@@ -217,10 +235,13 @@ class Reward < ActiveRecord::Base
       c.pointsize '36'
       c.draw "text -20,2110 '№ #{self.id}'"
     end
-    image.write "./public/diplomas/diploma.jpg"
+    output_diploma = "./public/diplomas/diploma#{dnum}.jpg"
+    image.write output_diploma
+    return "/diplomas/diploma#{dnum}.jpg"
   end
 
   def diploma_number8(position, prize)
+    dnum = rand(100)
   	image = MiniMagick::Image.open("./public/original_diplomas/8.jpg")
     image.resize "1654x2339"
     image.format "jpg"
@@ -248,10 +269,13 @@ class Reward < ActiveRecord::Base
       c.pointsize '36'
       c.draw "text -20,2265 '№ #{self.id}'"
     end
-    image.write "./public/diplomas/diploma.jpg"
+    output_diploma = "./public/diplomas/diploma#{dnum}.jpg"
+    image.write output_diploma
+    return "/diplomas/diploma#{dnum}.jpg"
   end
 
   def diploma_number9(position, prize)
+    dnum = rand(100)
   	image = MiniMagick::Image.open("./public/original_diplomas/9.jpg")
     image.resize "1654x2339"
     image.format "jpg"
@@ -279,10 +303,13 @@ class Reward < ActiveRecord::Base
       c.pointsize '36'
       c.draw "text 0,2215 '№ #{self.id}'"
     end
-    image.write "./public/diplomas/diploma.jpg"
+    output_diploma = "./public/diplomas/diploma#{dnum}.jpg"
+    image.write output_diploma
+    return "/diplomas/diploma#{dnum}.jpg"
   end
 
   def diploma_number10(position, prize)
+    dnum = rand(100)
   	image = MiniMagick::Image.open("./public/original_diplomas/10.jpg")
     image.resize "1654x2339"
     image.format "jpg"
@@ -311,6 +338,8 @@ class Reward < ActiveRecord::Base
       c.pointsize '36'
       c.draw "text 0,2291 '№ #{self.id}'"
     end
-    image.write "./public/diplomas/diploma.jpg"
+    output_diploma = "./public/diplomas/diploma#{dnum}.jpg"
+    image.write output_diploma
+    return "/diplomas/diploma#{dnum}.jpg"
   end
 end
