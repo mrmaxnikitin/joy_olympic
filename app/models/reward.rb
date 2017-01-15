@@ -29,7 +29,7 @@ class Reward < ActiveRecord::Base
       c.pointsize '40'
       c.draw "text -153,1650 '#{Russian::strftime(self.created_at, "%d.%m.%Y г.")}'"
       c.pointsize '36'
-      c.draw "text 0,2190 '№ #{self.id}'"
+      c.draw "text 0,2190 '№ J-#{self.id}'"
     end
     output_diploma = "./public/diplomas/diploma#{dnum}.jpg"
     image.write output_diploma
@@ -63,7 +63,7 @@ class Reward < ActiveRecord::Base
       c.pointsize '40'
       c.draw "text 60,1740 '#{Russian::strftime(self.created_at, "%d.%m.%Y г.")}'"
       c.pointsize '36'
-      c.draw "text 0,2190 '№ #{self.id}'"
+      c.draw "text 0,2190 '№ J-#{self.id}'"
     end
     output_diploma = "./public/diplomas/diploma#{dnum}.jpg"
     image.write output_diploma
@@ -97,7 +97,7 @@ class Reward < ActiveRecord::Base
       c.pointsize '40'
       c.draw "text 36,1740 '#{Russian::strftime(self.created_at, "%d.%m.%Y г.")}'"
       c.pointsize '36'
-      c.draw "text 30,2250 '№ #{self.id}'"
+      c.draw "text 30,2250 '№ J-#{self.id}'"
     end
     output_diploma = "./public/diplomas/diploma#{dnum}.jpg"
     image.write output_diploma
@@ -131,7 +131,7 @@ class Reward < ActiveRecord::Base
       c.pointsize '40'
       c.draw "text 39,1800 '#{Russian::strftime(self.created_at, "%d.%m.%Y г.")}'"
       c.pointsize '36'
-      c.draw "text 0,2190 '№ #{self.id}'"
+      c.draw "text 0,2190 '№ J-#{self.id}'"
     end
     output_diploma = "./public/diplomas/diploma#{dnum}.jpg"
     image.write output_diploma
@@ -165,7 +165,7 @@ class Reward < ActiveRecord::Base
       c.pointsize '40'
       c.draw "text -107,1650 '#{Russian::strftime(self.created_at, "%d.%m.%Y г.")}'"
       c.pointsize '36'
-      c.draw "text 0,2190 '№ #{self.id}'"
+      c.draw "text 0,2190 '№ J-#{self.id}'"
     end
     output_diploma = "./public/diplomas/diploma#{dnum}.jpg"
     image.write output_diploma
@@ -199,7 +199,7 @@ class Reward < ActiveRecord::Base
       c.pointsize '40'
       c.draw "text 48,1550 '#{Russian::strftime(self.created_at, "%d.%m.%Y г.")}'"
       c.pointsize '36'
-      c.draw "text 0,2250 '№ #{self.id}'"
+      c.draw "text 0,2250 '№ J-#{self.id}'"
     end
     output_diploma = "./public/diplomas/diploma#{dnum}.jpg"
     image.write output_diploma
@@ -233,7 +233,7 @@ class Reward < ActiveRecord::Base
       c.pointsize '40'
       c.draw "text -53,1630 '#{Russian::strftime(self.created_at, "%d.%m.%Y г.")}'"
       c.pointsize '36'
-      c.draw "text -20,2110 '№ #{self.id}'"
+      c.draw "text -20,2110 '№ J-#{self.id}'"
     end
     output_diploma = "./public/diplomas/diploma#{dnum}.jpg"
     image.write output_diploma
@@ -267,7 +267,7 @@ class Reward < ActiveRecord::Base
       c.pointsize '40'
       c.draw "text 58,1640 '#{Russian::strftime(self.created_at, "%d.%m.%Y г.")}'"
       c.pointsize '36'
-      c.draw "text -20,2265 '№ #{self.id}'"
+      c.draw "text -20,2265 '№ J-#{self.id}'"
     end
     output_diploma = "./public/diplomas/diploma#{dnum}.jpg"
     image.write output_diploma
@@ -301,7 +301,7 @@ class Reward < ActiveRecord::Base
       c.pointsize '40'
       c.draw "text -20,1840 '#{Russian::strftime(self.created_at, "%d.%m.%Y г.")}'"
       c.pointsize '36'
-      c.draw "text 0,2215 '№ #{self.id}'"
+      c.draw "text 0,2215 '№ J-#{self.id}'"
     end
     output_diploma = "./public/diplomas/diploma#{dnum}.jpg"
     image.write output_diploma
@@ -336,7 +336,7 @@ class Reward < ActiveRecord::Base
       c.draw "text -278,1810 '#{Russian::strftime(self.created_at, "%d.%m.%Y г.")}'"
       c.fill '#ffffff'
       c.pointsize '36'
-      c.draw "text 0,2291 '№ #{self.id}'"
+      c.draw "text 0,2291 '№ J-#{self.id}'"
     end
     output_diploma = "./public/diplomas/diploma#{dnum}.jpg"
     image.write output_diploma
