@@ -18,7 +18,21 @@
 		</div>
 		<a id='buy-diploma' class='btn btn-our btn-our-green'>Приобрести этот диплом за 100 рублей</a>
 		<div class='payment-form'>
-			Форма оплаты
+			<h4>Покупка диплома</h4>
+			<form action="https://money.yandex.ru/eshop.xml" method="post">
+		    <input required name="shopId" value="95443" type="hidden"/>
+		    <input required name="scid" value="85683" type="hidden"/>
+		    <input required name="sum" value="100" type="hidden">
+		    <input required name="customerNumber" type="hidden" value="" size="64"/><br>
+
+		    Имя покупателя:<br>   
+		    <input name="custName" value="" size="64"/><br>
+
+		    Email покупателя:<br>    
+		    <input name="custEmail" value="" size="64"/><br>
+
+		    <input type="submit" value="Оплатить"> 
+		  </form>
 		</div>
 	<% else %>
 		<div class='col-3of6 ma mtl img-diploma'>
