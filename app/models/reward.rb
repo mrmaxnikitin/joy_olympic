@@ -5,6 +5,16 @@ class Reward < ActiveRecord::Base
   def diploma_number1(position, prize)
     dnum = rand(100)
   	image = MiniMagick::Image.open("./public/original_diplomas/1.jpg")
+    subject = ""
+    if self.contest_id == 1
+      subject = "по русскому языку"
+    elsif self.contest_id == 2
+      subject = "по математике"
+    elsif self.contest_id == 3
+      subject = "по окружаещему миру"
+    elsif self.contest_id == 4
+      subject = "по литературе"
+    end
     image.resize "1654x2339"
     image.format "jpg"
     image.combine_options do |c|
@@ -25,7 +35,7 @@ class Reward < ActiveRecord::Base
       c.pointsize '50'
       c.draw "text 0,#{position+400} 'за победу во Всероссийской олимпиаде'"
       c.pointsize '50'
-      c.draw "text 0,#{position+480} 'по русскому языку'"
+      c.draw "text 0,#{position+480} '#{subject}'"
       c.pointsize '40'
       c.draw "text -153,1650 '#{Russian::strftime(self.created_at, "%d.%m.%Y г.")}'"
       c.pointsize '36'
@@ -39,6 +49,16 @@ class Reward < ActiveRecord::Base
   def diploma_number2(position, prize)
     dnum = rand(100)
   	image = MiniMagick::Image.open("./public/original_diplomas/2.jpg")
+    subject = ""
+    if self.contest_id == 1
+      subject = "по русскому языку"
+    elsif self.contest_id == 2
+      subject = "по математике"
+    elsif self.contest_id == 3
+      subject = "по окружаещему миру"
+    elsif self.contest_id == 4
+      subject = "по литературе"
+    end
     image.resize "1654x2339"
     image.format "jpg"
     image.combine_options do |c|
@@ -59,7 +79,7 @@ class Reward < ActiveRecord::Base
       c.pointsize '50'
       c.draw "text 0,#{position+400} 'за победу во Всероссийской олимпиаде'"
       c.pointsize '50'
-      c.draw "text 0,#{position+480} 'по русскому языку'"
+      c.draw "text 0,#{position+480} '#{subject}'"
       c.pointsize '40'
       c.draw "text 60,1740 '#{Russian::strftime(self.created_at, "%d.%m.%Y г.")}'"
       c.pointsize '36'
@@ -73,6 +93,16 @@ class Reward < ActiveRecord::Base
   def diploma_number3(position, prize)
     dnum = rand(100)
   	image = MiniMagick::Image.open("./public/original_diplomas/3.jpg")
+    subject = ""
+    if self.contest_id == 1
+      subject = "по русскому языку"
+    elsif self.contest_id == 2
+      subject = "по математике"
+    elsif self.contest_id == 3
+      subject = "по окружаещему миру"
+    elsif self.contest_id == 4
+      subject = "по литературе"
+    end
     image.resize "1654x2339"
     image.format "jpg"
     image.combine_options do |c|
@@ -93,7 +123,7 @@ class Reward < ActiveRecord::Base
       c.pointsize '50'
       c.draw "text 0,#{position+400} 'за победу во Всероссийской олимпиаде'"
       c.pointsize '50'
-      c.draw "text 0,#{position+480} 'по русскому языку'"
+      c.draw "text 0,#{position+480} '#{subject}'"
       c.pointsize '40'
       c.draw "text 36,1740 '#{Russian::strftime(self.created_at, "%d.%m.%Y г.")}'"
       c.pointsize '36'
@@ -107,6 +137,16 @@ class Reward < ActiveRecord::Base
   def diploma_number4(position, prize)
     dnum = rand(100)
   	image = MiniMagick::Image.open("./public/original_diplomas/4.jpg")
+    subject = ""
+    if self.contest_id == 1
+      subject = "по русскому языку"
+    elsif self.contest_id == 2
+      subject = "по математике"
+    elsif self.contest_id == 3
+      subject = "по окружаещему миру"
+    elsif self.contest_id == 4
+      subject = "по литературе"
+    end
     image.resize "1654x2339"
     image.format "jpg"
     image.combine_options do |c|
@@ -127,7 +167,7 @@ class Reward < ActiveRecord::Base
       c.pointsize '50'
       c.draw "text 0,#{position+400} 'за победу во Всероссийской олимпиаде'"
       c.pointsize '50'
-      c.draw "text 0,#{position+480} 'по русскому языку'"
+      c.draw "text 0,#{position+480} '#{subject}'"
       c.pointsize '40'
       c.draw "text 39,1800 '#{Russian::strftime(self.created_at, "%d.%m.%Y г.")}'"
       c.pointsize '36'
@@ -141,6 +181,16 @@ class Reward < ActiveRecord::Base
   def diploma_number5(position, prize)
     dnum = rand(100)
   	image = MiniMagick::Image.open("./public/original_diplomas/5.jpg")
+    subject = ""
+    if self.contest_id == 1
+      subject = "по русскому языку"
+    elsif self.contest_id == 2
+      subject = "по математике"
+    elsif self.contest_id == 3
+      subject = "по окружаещему миру"
+    elsif self.contest_id == 4
+      subject = "по литературе"
+    end
     image.resize "1654x2339"
     image.format "jpg"
     image.combine_options do |c|
@@ -161,7 +211,7 @@ class Reward < ActiveRecord::Base
       c.pointsize '50'
       c.draw "text 0,#{position+400} 'за победу во Всероссийской олимпиаде'"
       c.pointsize '50'
-      c.draw "text 0,#{position+480} 'по русскому языку'"
+      c.draw "text 0,#{position+480} '#{subject}'"
       c.pointsize '40'
       c.draw "text -107,1650 '#{Russian::strftime(self.created_at, "%d.%m.%Y г.")}'"
       c.pointsize '36'
@@ -175,6 +225,16 @@ class Reward < ActiveRecord::Base
   def diploma_number6(position, prize)
     dnum = rand(100)
   	image = MiniMagick::Image.open("./public/original_diplomas/6.jpg")
+    subject = ""
+    if self.contest_id == 1
+      subject = "по русскому языку"
+    elsif self.contest_id == 2
+      subject = "по математике"
+    elsif self.contest_id == 3
+      subject = "по окружаещему миру"
+    elsif self.contest_id == 4
+      subject = "по литературе"
+    end
     image.resize "1654x2339"
     image.format "jpg"
     image.combine_options do |c|
@@ -195,7 +255,7 @@ class Reward < ActiveRecord::Base
       c.pointsize '50'
       c.draw "text 0,#{position+400} 'за победу во Всероссийской олимпиаде'"
       c.pointsize '50'
-      c.draw "text 0,#{position+480} 'по русскому языку'"
+      c.draw "text 0,#{position+480} '#{subject}'"
       c.pointsize '40'
       c.draw "text 48,1550 '#{Russian::strftime(self.created_at, "%d.%m.%Y г.")}'"
       c.pointsize '36'
@@ -209,6 +269,16 @@ class Reward < ActiveRecord::Base
   def diploma_number7(position, prize)
     dnum = rand(100)
   	image = MiniMagick::Image.open("./public/original_diplomas/7.jpg")
+    subject = ""
+    if self.contest_id == 1
+      subject = "по русскому языку"
+    elsif self.contest_id == 2
+      subject = "по математике"
+    elsif self.contest_id == 3
+      subject = "по окружаещему миру"
+    elsif self.contest_id == 4
+      subject = "по литературе"
+    end
     image.resize "1654x2339"
     image.format "jpg"
     image.combine_options do |c|
@@ -229,7 +299,7 @@ class Reward < ActiveRecord::Base
       c.pointsize '50'
       c.draw "text 0,#{position+400} 'за победу во Всероссийской олимпиаде'"
       c.pointsize '50'
-      c.draw "text 0,#{position+480} 'по русскому языку'"
+      c.draw "text 0,#{position+480} '#{subject}'"
       c.pointsize '40'
       c.draw "text -53,1630 '#{Russian::strftime(self.created_at, "%d.%m.%Y г.")}'"
       c.pointsize '36'
@@ -243,6 +313,16 @@ class Reward < ActiveRecord::Base
   def diploma_number8(position, prize)
     dnum = rand(100)
   	image = MiniMagick::Image.open("./public/original_diplomas/8.jpg")
+    subject = ""
+    if self.contest_id == 1
+      subject = "по русскому языку"
+    elsif self.contest_id == 2
+      subject = "по математике"
+    elsif self.contest_id == 3
+      subject = "по окружаещему миру"
+    elsif self.contest_id == 4
+      subject = "по литературе"
+    end
     image.resize "1654x2339"
     image.format "jpg"
     image.combine_options do |c|
@@ -263,7 +343,7 @@ class Reward < ActiveRecord::Base
       c.pointsize '50'
       c.draw "text 0,#{position+400} 'за победу во Всероссийской олимпиаде'"
       c.pointsize '50'
-      c.draw "text 0,#{position+480} 'по русскому языку'"
+      c.draw "text 0,#{position+480} '#{subject}'"
       c.pointsize '40'
       c.draw "text 58,1640 '#{Russian::strftime(self.created_at, "%d.%m.%Y г.")}'"
       c.pointsize '36'
@@ -277,6 +357,16 @@ class Reward < ActiveRecord::Base
   def diploma_number9(position, prize)
     dnum = rand(100)
   	image = MiniMagick::Image.open("./public/original_diplomas/9.jpg")
+    subject = ""
+    if self.contest_id == 1
+      subject = "по русскому языку"
+    elsif self.contest_id == 2
+      subject = "по математике"
+    elsif self.contest_id == 3
+      subject = "по окружаещему миру"
+    elsif self.contest_id == 4
+      subject = "по литературе"
+    end
     image.resize "1654x2339"
     image.format "jpg"
     image.combine_options do |c|
@@ -297,7 +387,7 @@ class Reward < ActiveRecord::Base
       c.pointsize '50'
       c.draw "text 0,#{position+400} 'за победу во Всероссийской олимпиаде'"
       c.pointsize '50'
-      c.draw "text 0,#{position+480} 'по русскому языку'"
+      c.draw "text 0,#{position+480} '#{subject}'"
       c.pointsize '40'
       c.draw "text -20,1840 '#{Russian::strftime(self.created_at, "%d.%m.%Y г.")}'"
       c.pointsize '36'
@@ -311,6 +401,16 @@ class Reward < ActiveRecord::Base
   def diploma_number10(position, prize)
     dnum = rand(100)
   	image = MiniMagick::Image.open("./public/original_diplomas/10.jpg")
+    subject = ""
+    if self.contest_id == 1
+      subject = "по русскому языку"
+    elsif self.contest_id == 2
+      subject = "по математике"
+    elsif self.contest_id == 3
+      subject = "по окружаещему миру"
+    elsif self.contest_id == 4
+      subject = "по литературе"
+    end
     image.resize "1654x2339"
     image.format "jpg"
     image.combine_options do |c|
@@ -331,7 +431,7 @@ class Reward < ActiveRecord::Base
       c.pointsize '50'
       c.draw "text 0,#{position+400} 'за победу во Всероссийской олимпиаде'"
       c.pointsize '50'
-      c.draw "text 0,#{position+480} 'по русскому языку'"
+      c.draw "text 0,#{position+480} '#{subject}'"
       c.pointsize '40'
       c.draw "text -278,1810 '#{Russian::strftime(self.created_at, "%d.%m.%Y г.")}'"
       c.fill '#ffffff'
