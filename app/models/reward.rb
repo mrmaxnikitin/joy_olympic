@@ -13,7 +13,7 @@ class Reward < ActiveRecord::Base
     elsif self.contest_id == 3
       subject = "по английскому языку"
     elsif self.contest_id == 4
-      subject = "по окружаещему миру"
+      subject = "по окружающему миру"
     end
     image.resize "1654x2339"
     image.format "jpg"
@@ -57,7 +57,7 @@ class Reward < ActiveRecord::Base
     elsif self.contest_id == 3
       subject = "по английскому языку"
     elsif self.contest_id == 4
-      subject = "по окружаещему миру"
+      subject = "по окружающему миру"
     end
     image.resize "1654x2339"
     image.format "jpg"
@@ -101,7 +101,7 @@ class Reward < ActiveRecord::Base
     elsif self.contest_id == 3
       subject = "по английскому языку"
     elsif self.contest_id == 4
-      subject = "по окружаещему миру"
+      subject = "по окружающему миру"
     end
     image.resize "1654x2339"
     image.format "jpg"
@@ -145,7 +145,7 @@ class Reward < ActiveRecord::Base
     elsif self.contest_id == 3
       subject = "по английскому языку"
     elsif self.contest_id == 4
-      subject = "по окружаещему миру"
+      subject = "по окружающему миру"
     end
     image.resize "1654x2339"
     image.format "jpg"
@@ -189,7 +189,7 @@ class Reward < ActiveRecord::Base
     elsif self.contest_id == 3
       subject = "по английскому языку"
     elsif self.contest_id == 4
-      subject = "по окружаещему миру"
+      subject = "по окружающему миру"
     end
     image.resize "1654x2339"
     image.format "jpg"
@@ -233,7 +233,7 @@ class Reward < ActiveRecord::Base
     elsif self.contest_id == 3
       subject = "по английскому языку"
     elsif self.contest_id == 4
-      subject = "по окружаещему миру"
+      subject = "по окружающему миру"
     end
     image.resize "1654x2339"
     image.format "jpg"
@@ -277,7 +277,7 @@ class Reward < ActiveRecord::Base
     elsif self.contest_id == 3
       subject = "по английскому языку"
     elsif self.contest_id == 4
-      subject = "по окружаещему миру"
+      subject = "по окружающему миру"
     end
     image.resize "1654x2339"
     image.format "jpg"
@@ -321,7 +321,7 @@ class Reward < ActiveRecord::Base
     elsif self.contest_id == 3
       subject = "по английскому языку"
     elsif self.contest_id == 4
-      subject = "по окружаещему миру"
+      subject = "по окружающему миру"
     end
     image.resize "1654x2339"
     image.format "jpg"
@@ -365,7 +365,7 @@ class Reward < ActiveRecord::Base
     elsif self.contest_id == 3
       subject = "по английскому языку"
     elsif self.contest_id == 4
-      subject = "по окружаещему миру"
+      subject = "по окружающему миру"
     end
     image.resize "1654x2339"
     image.format "jpg"
@@ -409,7 +409,7 @@ class Reward < ActiveRecord::Base
     elsif self.contest_id == 3
       subject = "по английскому языку"
     elsif self.contest_id == 4
-      subject = "по окружаещему миру"
+      subject = "по окружающему миру"
     end
     image.resize "1654x2339"
     image.format "jpg"
