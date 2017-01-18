@@ -7,13 +7,13 @@ class Reward < ActiveRecord::Base
   	image = MiniMagick::Image.open("./public/original_diplomas/1.jpg")
     subject = ""
     if self.contest_id == 1
-      subject = "по русскому языку"
-    elsif self.contest_id == 2
       subject = "по математике"
+    elsif self.contest_id == 2
+      subject = "по русскому языку"
     elsif self.contest_id == 3
-      subject = "по окружаещему миру"
+      subject = "по английскому языку"
     elsif self.contest_id == 4
-      subject = "по литературе"
+      subject = "по окружаещему миру"
     end
     image.resize "1654x2339"
     image.format "jpg"
@@ -51,13 +51,13 @@ class Reward < ActiveRecord::Base
   	image = MiniMagick::Image.open("./public/original_diplomas/2.jpg")
     subject = ""
     if self.contest_id == 1
-      subject = "по русскому языку"
-    elsif self.contest_id == 2
       subject = "по математике"
+    elsif self.contest_id == 2
+      subject = "по русскому языку"
     elsif self.contest_id == 3
-      subject = "по окружаещему миру"
+      subject = "по английскому языку"
     elsif self.contest_id == 4
-      subject = "по литературе"
+      subject = "по окружаещему миру"
     end
     image.resize "1654x2339"
     image.format "jpg"
@@ -95,13 +95,13 @@ class Reward < ActiveRecord::Base
   	image = MiniMagick::Image.open("./public/original_diplomas/3.jpg")
     subject = ""
     if self.contest_id == 1
-      subject = "по русскому языку"
-    elsif self.contest_id == 2
       subject = "по математике"
+    elsif self.contest_id == 2
+      subject = "по русскому языку"
     elsif self.contest_id == 3
-      subject = "по окружаещему миру"
+      subject = "по английскому языку"
     elsif self.contest_id == 4
-      subject = "по литературе"
+      subject = "по окружаещему миру"
     end
     image.resize "1654x2339"
     image.format "jpg"
@@ -139,13 +139,13 @@ class Reward < ActiveRecord::Base
   	image = MiniMagick::Image.open("./public/original_diplomas/4.jpg")
     subject = ""
     if self.contest_id == 1
-      subject = "по русскому языку"
-    elsif self.contest_id == 2
       subject = "по математике"
+    elsif self.contest_id == 2
+      subject = "по русскому языку"
     elsif self.contest_id == 3
-      subject = "по окружаещему миру"
+      subject = "по английскому языку"
     elsif self.contest_id == 4
-      subject = "по литературе"
+      subject = "по окружаещему миру"
     end
     image.resize "1654x2339"
     image.format "jpg"
@@ -183,13 +183,13 @@ class Reward < ActiveRecord::Base
   	image = MiniMagick::Image.open("./public/original_diplomas/5.jpg")
     subject = ""
     if self.contest_id == 1
-      subject = "по русскому языку"
-    elsif self.contest_id == 2
       subject = "по математике"
+    elsif self.contest_id == 2
+      subject = "по русскому языку"
     elsif self.contest_id == 3
-      subject = "по окружаещему миру"
+      subject = "по английскому языку"
     elsif self.contest_id == 4
-      subject = "по литературе"
+      subject = "по окружаещему миру"
     end
     image.resize "1654x2339"
     image.format "jpg"
@@ -227,13 +227,13 @@ class Reward < ActiveRecord::Base
   	image = MiniMagick::Image.open("./public/original_diplomas/6.jpg")
     subject = ""
     if self.contest_id == 1
-      subject = "по русскому языку"
-    elsif self.contest_id == 2
       subject = "по математике"
+    elsif self.contest_id == 2
+      subject = "по русскому языку"
     elsif self.contest_id == 3
-      subject = "по окружаещему миру"
+      subject = "по английскому языку"
     elsif self.contest_id == 4
-      subject = "по литературе"
+      subject = "по окружаещему миру"
     end
     image.resize "1654x2339"
     image.format "jpg"
@@ -271,13 +271,13 @@ class Reward < ActiveRecord::Base
   	image = MiniMagick::Image.open("./public/original_diplomas/7.jpg")
     subject = ""
     if self.contest_id == 1
-      subject = "по русскому языку"
-    elsif self.contest_id == 2
       subject = "по математике"
+    elsif self.contest_id == 2
+      subject = "по русскому языку"
     elsif self.contest_id == 3
-      subject = "по окружаещему миру"
+      subject = "по английскому языку"
     elsif self.contest_id == 4
-      subject = "по литературе"
+      subject = "по окружаещему миру"
     end
     image.resize "1654x2339"
     image.format "jpg"
@@ -315,13 +315,13 @@ class Reward < ActiveRecord::Base
   	image = MiniMagick::Image.open("./public/original_diplomas/8.jpg")
     subject = ""
     if self.contest_id == 1
-      subject = "по русскому языку"
-    elsif self.contest_id == 2
       subject = "по математике"
+    elsif self.contest_id == 2
+      subject = "по русскому языку"
     elsif self.contest_id == 3
-      subject = "по окружаещему миру"
+      subject = "по английскому языку"
     elsif self.contest_id == 4
-      subject = "по литературе"
+      subject = "по окружаещему миру"
     end
     image.resize "1654x2339"
     image.format "jpg"
@@ -359,13 +359,13 @@ class Reward < ActiveRecord::Base
   	image = MiniMagick::Image.open("./public/original_diplomas/9.jpg")
     subject = ""
     if self.contest_id == 1
-      subject = "по русскому языку"
-    elsif self.contest_id == 2
       subject = "по математике"
+    elsif self.contest_id == 2
+      subject = "по русскому языку"
     elsif self.contest_id == 3
-      subject = "по окружаещему миру"
+      subject = "по английскому языку"
     elsif self.contest_id == 4
-      subject = "по литературе"
+      subject = "по окружаещему миру"
     end
     image.resize "1654x2339"
     image.format "jpg"
@@ -403,13 +403,13 @@ class Reward < ActiveRecord::Base
   	image = MiniMagick::Image.open("./public/original_diplomas/10.jpg")
     subject = ""
     if self.contest_id == 1
-      subject = "по русскому языку"
-    elsif self.contest_id == 2
       subject = "по математике"
+    elsif self.contest_id == 2
+      subject = "по русскому языку"
     elsif self.contest_id == 3
-      subject = "по окружаещему миру"
+      subject = "по английскому языку"
     elsif self.contest_id == 4
-      subject = "по литературе"
+      subject = "по окружаещему миру"
     end
     image.resize "1654x2339"
     image.format "jpg"
