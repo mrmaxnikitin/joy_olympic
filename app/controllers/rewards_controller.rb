@@ -12,11 +12,11 @@ class RewardsController < ApplicationController
       when 0
          prize = 'Участника'
       when 1
-         prize = 'I степени'
+         prize = 'I место'
       when 2
-         prize = 'II степени'
+         prize = 'II место'
       when 3
-         prize = 'III степени'
+         prize = 'III место'
       end
 
       case @reward.number
