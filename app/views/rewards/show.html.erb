@@ -5,7 +5,7 @@
 		prize = @reward.prize.to_s + " место"
 	end 
 %>
-<%= if @reward.contest_id == 1
+<% if @reward.contest_id == 1
       subject = "по математике"
     elsif @reward.contest_id == 2
       subject = "по русскому языку"
