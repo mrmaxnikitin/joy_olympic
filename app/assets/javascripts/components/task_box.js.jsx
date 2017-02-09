@@ -243,6 +243,28 @@ const TaskBox = React.createClass({
           <div className='participate-result-diploma'>
             <div className='card pd40 h1 mbm'>Вы можете приобрести свой диплом в разделе <a href='/rewards'>ИТОГИ</a>.</div>
           </div>
+          <div className='tac other-our-sites'>
+            <h1 className='clrw'>Примите участие в наших олимпиадах на других сайтах</h1>
+            <div className='col-main ma mtm'>
+              <div className='col-3of6 pd10 fl'>
+                <a href='http://joy-olympic.ru' target='_blank'>
+                  <div className='card'>
+                    <img src='/images/beecan.gif' />
+                    <h4>joy-olympic.ru</h4>
+                  </div>
+                </a>
+              </div>
+              <div className='col-3of6 pd10 fl'>
+                <a href='http://sprint-olympic.ru' target='_blank'>
+                  <div className='card'>
+                    <img src='/images/run.gif' />
+                    <h4>sprint-olympic.ru</h4>
+                  </div>
+                </a>
+              </div>
+              <div className='clear'></div>
+            </div>
+          </div>
         </div>
       );
     }
