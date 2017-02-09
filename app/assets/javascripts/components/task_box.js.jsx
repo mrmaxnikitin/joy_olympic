@@ -247,10 +247,10 @@ const TaskBox = React.createClass({
             <h1 className='clrw'>Примите участие в наших олимпиадах на других сайтах</h1>
             <div className='col-main ma mtm'>
               <div className='col-3of6 pd10 fl'>
-                <a href='http://joy-olympic.ru' target='_blank'>
+                <a href='http://pokori-olimp.ru' target='_blank'>
                   <div className='card'>
                     <img src='/images/beecan.gif' />
-                    <h4>joy-olympic.ru</h4>
+                    <h4>pokori-olimp.ru</h4>
                   </div>
                 </a>
               </div>
