@@ -16,12 +16,14 @@ class Reward < ActiveRecord::Base
       subject = "по окружающему миру"
     end
 
+    margin_text = -80
     institution = self.institution
     if institution.size > 44
       institution_44 = institution[0, 44]
       index_inst = institution_44.rindex(" ")
       fp_institution = institution[0, index_inst]
       sp_institution = institution[index_inst+1, institution.size]
+      margin_text = 0
     end
 
     image.resize "1654x2339"
@@ -48,12 +50,12 @@ class Reward < ActiveRecord::Base
       end
       c.pointsize '50'
       if self.prize != 0
-        c.draw "text 0,#{position+480} 'за победу во Всероссийской олимпиаде'"
+        c.draw "text 0,#{position+480+margin_text} 'за победу во Всероссийской олимпиаде'"
       else
-        c.draw "text 0,#{position+480} 'за участие во Всероссийской олимпиаде'"
+        c.draw "text 0,#{position+480+margin_text} 'за участие во Всероссийской олимпиаде'"
       end
       c.pointsize '50'
-      c.draw "text 0,#{position+560} '#{subject}'"
+      c.draw "text 0,#{position+560+margin_text} '#{subject}'"
       c.pointsize '40'
       c.draw "text -153,1650 '#{Russian::strftime(self.created_at, "%d.%m.%Y г.")}'"
       c.pointsize '36'
@@ -78,12 +80,14 @@ class Reward < ActiveRecord::Base
       subject = "по окружающему миру"
     end
 
+    margin_text = -80
     institution = self.institution
     if institution.size > 44
       institution_44 = institution[0, 44]
       index_inst = institution_44.rindex(" ")
       fp_institution = institution[0, index_inst]
       sp_institution = institution[index_inst+1, institution.size]
+      margin_text = 0
     end
     image.resize "1654x2339"
     image.format "jpg"
@@ -109,12 +113,12 @@ class Reward < ActiveRecord::Base
       end
       c.pointsize '50'
       if self.prize != 0
-        c.draw "text 0,#{position+480} 'за победу во Всероссийской олимпиаде'"
+        c.draw "text 0,#{position+480+margin_text} 'за победу во Всероссийской олимпиаде'"
       else
-        c.draw "text 0,#{position+480} 'за участие во Всероссийской олимпиаде'"
+        c.draw "text 0,#{position+480+margin_text} 'за участие во Всероссийской олимпиаде'"
       end
       c.pointsize '50'
-      c.draw "text 0,#{position+560} '#{subject}'"
+      c.draw "text 0,#{position+560+margin_text} '#{subject}'"
       c.pointsize '40'
       c.draw "text 60,1740 '#{Russian::strftime(self.created_at, "%d.%m.%Y г.")}'"
       c.pointsize '36'
@@ -138,12 +142,15 @@ class Reward < ActiveRecord::Base
     elsif self.contest_id == 4
       subject = "по окружающему миру"
     end
+
+    margin_text = -80
     institution = self.institution
     if institution.size > 44
       institution_44 = institution[0, 44]
       index_inst = institution_44.rindex(" ")
       fp_institution = institution[0, index_inst]
       sp_institution = institution[index_inst+1, institution.size]
+      margin_text = 0
     end
     image.resize "1654x2339"
     image.format "jpg"
@@ -169,12 +176,12 @@ class Reward < ActiveRecord::Base
       end
       c.pointsize '50'
       if self.prize != 0
-        c.draw "text 0,#{position+480} 'за победу во Всероссийской олимпиаде'"
+        c.draw "text 0,#{position+480+margin_text} 'за победу во Всероссийской олимпиаде'"
       else
-        c.draw "text 0,#{position+480} 'за участие во Всероссийской олимпиаде'"
+        c.draw "text 0,#{position+480+margin_text} 'за участие во Всероссийской олимпиаде'"
       end
       c.pointsize '50'
-      c.draw "text 0,#{position+560} '#{subject}'"
+      c.draw "text 0,#{position+560+margin_text} '#{subject}'"
       c.pointsize '40'
       c.draw "text 36,1740 '#{Russian::strftime(self.created_at, "%d.%m.%Y г.")}'"
       c.pointsize '36'
@@ -198,12 +205,15 @@ class Reward < ActiveRecord::Base
     elsif self.contest_id == 4
       subject = "по окружающему миру"
     end
+
+    margin_text = -80
     institution = self.institution
     if institution.size > 44
       institution_44 = institution[0, 44]
       index_inst = institution_44.rindex(" ")
       fp_institution = institution[0, index_inst]
       sp_institution = institution[index_inst+1, institution.size]
+      margin_text = 0
     end
     image.resize "1654x2339"
     image.format "jpg"
@@ -229,12 +239,12 @@ class Reward < ActiveRecord::Base
       end
       c.pointsize '50'
       if self.prize != 0
-        c.draw "text 0,#{position+480} 'за победу во Всероссийской олимпиаде'"
+        c.draw "text 0,#{position+480+margin_text} 'за победу во Всероссийской олимпиаде'"
       else
-        c.draw "text 0,#{position+480} 'за участие во Всероссийской олимпиаде'"
+        c.draw "text 0,#{position+480+margin_text} 'за участие во Всероссийской олимпиаде'"
       end
       c.pointsize '50'
-      c.draw "text 0,#{position+560} '#{subject}'"
+      c.draw "text 0,#{position+560+margin_text} '#{subject}'"
       c.pointsize '40'
       c.draw "text 39,1800 '#{Russian::strftime(self.created_at, "%d.%m.%Y г.")}'"
       c.pointsize '36'
@@ -258,12 +268,15 @@ class Reward < ActiveRecord::Base
     elsif self.contest_id == 4
       subject = "по окружающему миру"
     end
+
+    margin_text = -80
     institution = self.institution
     if institution.size > 44
       institution_44 = institution[0, 44]
       index_inst = institution_44.rindex(" ")
       fp_institution = institution[0, index_inst]
       sp_institution = institution[index_inst+1, institution.size]
+      margin_text = 0
     end
     image.resize "1654x2339"
     image.format "jpg"
@@ -289,12 +302,12 @@ class Reward < ActiveRecord::Base
       end
       c.pointsize '50'
       if self.prize != 0
-        c.draw "text 0,#{position+480} 'за победу во Всероссийской олимпиаде'"
+        c.draw "text 0,#{position+480+margin_text} 'за победу во Всероссийской олимпиаде'"
       else
-        c.draw "text 0,#{position+480} 'за участие во Всероссийской олимпиаде'"
+        c.draw "text 0,#{position+480+margin_text} 'за участие во Всероссийской олимпиаде'"
       end
       c.pointsize '50'
-      c.draw "text 0,#{position+560} '#{subject}'"
+      c.draw "text 0,#{position+560+margin_text} '#{subject}'"
       c.pointsize '40'
       c.draw "text -107,1650 '#{Russian::strftime(self.created_at, "%d.%m.%Y г.")}'"
       c.pointsize '36'
@@ -318,12 +331,15 @@ class Reward < ActiveRecord::Base
     elsif self.contest_id == 4
       subject = "по окружающему миру"
     end
+
+    margin_text = -80
     institution = self.institution
     if institution.size > 44
       institution_44 = institution[0, 44]
       index_inst = institution_44.rindex(" ")
       fp_institution = institution[0, index_inst]
       sp_institution = institution[index_inst+1, institution.size]
+      margin_text = 0
     end
     image.resize "1654x2339"
     image.format "jpg"
@@ -349,12 +365,12 @@ class Reward < ActiveRecord::Base
       end
       c.pointsize '50'
       if self.prize != 0
-        c.draw "text 0,#{position+480} 'за победу во Всероссийской олимпиаде'"
+        c.draw "text 0,#{position+480+margin_text} 'за победу во Всероссийской олимпиаде'"
       else
-        c.draw "text 0,#{position+480} 'за участие во Всероссийской олимпиаде'"
+        c.draw "text 0,#{position+480+margin_text} 'за участие во Всероссийской олимпиаде'"
       end
       c.pointsize '50'
-      c.draw "text 0,#{position+560} '#{subject}'"
+      c.draw "text 0,#{position+560+margin_text} '#{subject}'"
       c.pointsize '40'
       c.draw "text 48,1550 '#{Russian::strftime(self.created_at, "%d.%m.%Y г.")}'"
       c.pointsize '36'
@@ -378,12 +394,15 @@ class Reward < ActiveRecord::Base
     elsif self.contest_id == 4
       subject = "по окружающему миру"
     end
+
+    margin_text = -80
     institution = self.institution
     if institution.size > 44
       institution_44 = institution[0, 44]
       index_inst = institution_44.rindex(" ")
       fp_institution = institution[0, index_inst]
       sp_institution = institution[index_inst+1, institution.size]
+      margin_text = 0
     end
     image.resize "1654x2339"
     image.format "jpg"
@@ -409,12 +428,12 @@ class Reward < ActiveRecord::Base
       end
       c.pointsize '50'
       if self.prize != 0
-        c.draw "text 0,#{position+480} 'за победу во Всероссийской олимпиаде'"
+        c.draw "text 0,#{position+480+margin_text} 'за победу во Всероссийской олимпиаде'"
       else
-        c.draw "text 0,#{position+480} 'за участие во Всероссийской олимпиаде'"
+        c.draw "text 0,#{position+480+margin_text} 'за участие во Всероссийской олимпиаде'"
       end
       c.pointsize '50'
-      c.draw "text 0,#{position+560} '#{subject}'"
+      c.draw "text 0,#{position+560+margin_text} '#{subject}'"
       c.pointsize '40'
       c.draw "text -53,1630 '#{Russian::strftime(self.created_at, "%d.%m.%Y г.")}'"
       c.pointsize '36'
@@ -438,12 +457,15 @@ class Reward < ActiveRecord::Base
     elsif self.contest_id == 4
       subject = "по окружающему миру"
     end
+
+    margin_text = -80
     institution = self.institution
     if institution.size > 44
       institution_44 = institution[0, 44]
       index_inst = institution_44.rindex(" ")
       fp_institution = institution[0, index_inst]
       sp_institution = institution[index_inst+1, institution.size]
+      margin_text = 0
     end
     image.resize "1654x2339"
     image.format "jpg"
@@ -469,12 +491,12 @@ class Reward < ActiveRecord::Base
       end
       c.pointsize '50'
       if self.prize != 0
-        c.draw "text 0,#{position+480} 'за победу во Всероссийской олимпиаде'"
+        c.draw "text 0,#{position+480+margin_text} 'за победу во Всероссийской олимпиаде'"
       else
-        c.draw "text 0,#{position+480} 'за участие во Всероссийской олимпиаде'"
+        c.draw "text 0,#{position+480+margin_text} 'за участие во Всероссийской олимпиаде'"
       end
       c.pointsize '50'
-      c.draw "text 0,#{position+560} '#{subject}'"
+      c.draw "text 0,#{position+560+margin_text} '#{subject}'"
       c.pointsize '40'
       c.draw "text 58,1640 '#{Russian::strftime(self.created_at, "%d.%m.%Y г.")}'"
       c.pointsize '36'
@@ -498,12 +520,15 @@ class Reward < ActiveRecord::Base
     elsif self.contest_id == 4
       subject = "по окружающему миру"
     end
+
+    margin_text = -80
     institution = self.institution
     if institution.size > 44
       institution_44 = institution[0, 44]
       index_inst = institution_44.rindex(" ")
       fp_institution = institution[0, index_inst]
       sp_institution = institution[index_inst+1, institution.size]
+      margin_text = 0
     end
     image.resize "1654x2339"
     image.format "jpg"
@@ -529,12 +554,12 @@ class Reward < ActiveRecord::Base
       end
       c.pointsize '50'
       if self.prize != 0
-        c.draw "text 0,#{position+480} 'за победу во Всероссийской олимпиаде'"
+        c.draw "text 0,#{position+480+margin_text} 'за победу во Всероссийской олимпиаде'"
       else
-        c.draw "text 0,#{position+480} 'за участие во Всероссийской олимпиаде'"
+        c.draw "text 0,#{position+480+margin_text} 'за участие во Всероссийской олимпиаде'"
       end
       c.pointsize '50'
-      c.draw "text 0,#{position+560} '#{subject}'"
+      c.draw "text 0,#{position+560+margin_text} '#{subject}'"
       c.pointsize '40'
       c.draw "text -20,1840 '#{Russian::strftime(self.created_at, "%d.%m.%Y г.")}'"
       c.pointsize '36'
@@ -558,12 +583,15 @@ class Reward < ActiveRecord::Base
     elsif self.contest_id == 4
       subject = "по окружающему миру"
     end
+
+    margin_text = -80
     institution = self.institution
     if institution.size > 44
       institution_44 = institution[0, 44]
       index_inst = institution_44.rindex(" ")
       fp_institution = institution[0, index_inst]
       sp_institution = institution[index_inst+1, institution.size]
+      margin_text = 0
     end
     image.resize "1654x2339"
     image.format "jpg"
@@ -589,12 +617,12 @@ class Reward < ActiveRecord::Base
       end
       c.pointsize '50'
       if self.prize != 0
-        c.draw "text 0,#{position+480} 'за победу во Всероссийской олимпиаде'"
+        c.draw "text 0,#{position+480+margin_text} 'за победу во Всероссийской олимпиаде'"
       else
-        c.draw "text 0,#{position+480} 'за участие во Всероссийской олимпиаде'"
+        c.draw "text 0,#{position+480+margin_text} 'за участие во Всероссийской олимпиаде'"
       end
       c.pointsize '50'
-      c.draw "text 0,#{position+560} '#{subject}'"
+      c.draw "text 0,#{position+560+margin_text} '#{subject}'"
       c.pointsize '40'
       c.draw "text -278,1810 '#{Russian::strftime(self.created_at, "%d.%m.%Y г.")}'"
       c.fill '#ffffff'
