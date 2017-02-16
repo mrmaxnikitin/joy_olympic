@@ -39,6 +39,7 @@
     .logoname{
       width: 80%;
       margin-bottom: 30px;
+      margin-top: 35px;
       box-shadow: 1px 1px 1p
     }
     .activities{
@@ -95,6 +96,7 @@
 	.col{
 		padding-left: 10px;
 		padding-right: 10px;
+		margin-bottom: 10px;
 	}
 	h4{
 	  margin: 10px 0;
@@ -119,4 +121,23 @@
 		border: 1px solid #E7E7E7;
 	}
 }
-
+@media screen and (max-width: 800px) {
+  #slide-content1{
+    width: 100%;
+    left: 5%;
+    right: 5%;
+    .logoname{
+    	margin-top: 0px;
+    }
+  }
+  .advantages-home{
+		.col{
+			width: 100% !important;
+		}
+	}
+	.olympics-home{
+		.col-press-25{
+			width: 50%;
+		}
+	}
+}
