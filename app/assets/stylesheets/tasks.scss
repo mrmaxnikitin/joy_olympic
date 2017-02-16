@@ -188,6 +188,17 @@
   }
 }
 
+@media screen and (max-width: 800px) {
+  .task-participate{
+    .taks-img{
+      width: 100%;
+    }
+    .task-body{
+      width: 100%;
+    }
+  }
+}
+
 @media screen and (max-width: 1080px) {
   .participate-page{
     .wrap-bar-task{

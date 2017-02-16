@@ -7,7 +7,7 @@ const Task = React.createClass({
     var id_radio = "var" + task.id
     return (
       <div className='task-participate animated fadeIn'>
-        <img src= {task.image} />
+        <img src= {task.image} className='taks-img' />
         <div className='task-body'>
           <div className='text'>
             {task.text}
