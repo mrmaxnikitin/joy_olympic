@@ -83,3 +83,24 @@
         }
 	}
 }
+
+.others-contests{
+    background-color: rgb(250, 249, 244);;
+    padding: 3em 0 3em 0;
+    text-align: center;
+    border-bottom: 1px solid #d4d4d4;
+    h1{
+        font-size: 40px;
+    }
+    div{
+     font-size: 18px;
+     margin-top: 20px;
+     a{
+        margin: 0 10px;
+        text-decoration: none;
+        &:hover{
+            text-decoration: underline;
+        }
+     }
+    }
+}

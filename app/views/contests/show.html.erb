@@ -1,3 +1,13 @@
+<div class="slide others-contests">
+	<h1>Дистанционные олимпиады</h1>
+	<div>
+		<% @contests.each do |contest|  %>
+		  <%= link_to contest_path(contest) do %>
+				<%=contest.title%>
+			<% end %>
+		<% end %>
+	</div>
+</div>
 <div class='slide contest-show'>
 	<!--<img class='contest-background-img' src='http://www.goldrhapsody.com/wp-content/uploads/2015/09/bigstock-Honey-and-Herbal-tea-on-wooden-67103101.jpg' /> -->
 	<div class='contest-content'>
