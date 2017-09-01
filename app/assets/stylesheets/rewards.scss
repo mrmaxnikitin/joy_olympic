@@ -99,3 +99,6 @@
 .custEmail, .custName{
 	width: 50% !important;
 }
+#getpay:disabled:hover {
+    cursor: not-allowed;
+}
