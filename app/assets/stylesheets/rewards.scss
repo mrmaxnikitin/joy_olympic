@@ -102,3 +102,16 @@
 #getpay:disabled:hover {
     cursor: not-allowed;
 }
+.action-joy{
+	margin-top: 20px;
+	padding: 8px 16px;
+	background-color: rgba(251, 119, 19, 0.8);
+	color: white;
+	border-radius: 3px;
+	border: 1px solid #dc6f28;
+	span{
+		font-weight: bold;
+		text-decoration: underline;
+		cursor: pointer;
+	}
+}

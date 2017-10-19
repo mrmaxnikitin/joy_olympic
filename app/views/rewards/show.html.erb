@@ -23,6 +23,9 @@
 				<h1><%= prize %></h1>
 				<h2><%= @reward.name %></h2>
 				<h3><%= subject %></h3>
+				<% if (Time.new.utc - @reward.created_at.utc) <= 3.days %>
+					<div class='action-joy'>После приобритения диплома для Вас будет действовать акция. Узнайте подробнее <span data-toggle="modal" data-target="#action_joy">ЗДЕСЬ</span></div>
+				<% end %>
 			</div>
 			<div class='clearboth'></div>
 		</div>
@@ -50,8 +53,13 @@
 		</div>
 	<% else %>
 		<div class='col-3of6 ma mtl img-diploma'>
+			<% if (Time.new.utc - @reward.created_at.utc) <= 3.days %>
+				<div class='action-joy'>Поздравляем с приобритением диплома! Теперь для Вас действует акция. Узнайте подробнее <span data-toggle="modal" data-target="#action_joy">ЗДЕСЬ</span></div>
+			<%end%>
+			</br>
 			<h1><%= prize %></h1>
 			<img src='<%= @output_diploma %>' width='100%' />
 		</div>
 	<% end %>
 </div>
+<%= render 'modal_action' %>
