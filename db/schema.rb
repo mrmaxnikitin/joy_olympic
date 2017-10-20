@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161225111806) do
+ActiveRecord::Schema.define(version: 20171020123604) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -50,15 +50,16 @@ ActiveRecord::Schema.define(version: 20161225111806) do
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true, using: :btree
 
   create_table "contests", force: :cascade do |t|
-    t.string   "title",                        null: false
+    t.string   "title",                         null: false
     t.text     "description"
-    t.string   "category",                     null: false
+    t.string   "category",                      null: false
     t.string   "age"
-    t.boolean  "active",        default: true
+    t.boolean  "active",         default: true
     t.string   "image"
     t.string   "reward_number"
-    t.datetime "created_at",                   null: false
-    t.datetime "updated_at",                   null: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+    t.string   "targetAudience"
   end
 
   create_table "games", force: :cascade do |t|

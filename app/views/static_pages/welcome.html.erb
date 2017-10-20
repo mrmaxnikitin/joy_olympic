@@ -2,8 +2,8 @@
 	<img id="image-main-page" class='hidden-xs' src="/images/bearbee.gif" data-pin-nopin="true">
 	<div class="slide-content" id="slide-content1">
 		<img src='/images/logo-name1.png' alt='джой олимпиады | дистанционные олимпиады для школьников' class='logoname'/>
-		<h1>Дистанционные олимпиады 2017</h1>
-		<h2>Олимпиады по математике, окружающему миру,</br>русскому и английскому языкам</h2>
+		<h1>Дистанционные олимпиады для школьников и дошкольников 2017</h1>
+		<h2>Олимпиады по математике, окружающему миру,</br>русскому и английскому языкам.</h2>
 		<!--<div class='activities'>
 			<a class='btn btn-our btn-our-green'>Зарегист!</a>
 			<a class='btn btn-our btn-our-blue'>Попробовать бесплатно</a>
@@ -38,7 +38,7 @@
 	<img src='/images/devider-bee.png' alt='интернет олимпиады для школьников'/>
 </div>
 <div class='olympics-home mbl'>
-	  <h1 class='tac title-on-page'>Предлагаем вам</h1>
+	  <h1 class='tac title-on-page'>Для школьников</h1>
 	  <% @contests.each do |contest|  %>
 		  <%= link_to contest_path(contest) do %>
 				<div class='col col-press-25'>
@@ -55,9 +55,28 @@
 		</div>-->
 		<div class='clearboth'></div>
 </div>
-<div class='slide others-our-sites-on-welcome'>
-	<%= link_to 'Другие наши сайты с олимпиадами', sites_path %>
+<div class='olympics-home preschool mbl'>
+	  <h1 class='tac title-on-page'>Для дошкольников <b>4-7 лет</b></h1>
+	  <% @precontests.each do |contest|  %>
+		  <%= link_to contest_path(contest) do %>
+				<div class='col col-press-20'>
+					<div class='card'>
+						<img src='<%=contest.image%>' alt='Олимпиады по математике, информатике, русскому и английскому языкам'/>
+						<h4><%=contest.title%></h4>
+					</div>
+				</div>
+			<% end %>
+		<% end %>
+		<!--<div class='col col-33p game-olympics'>
+			<img src='/images/game-olympics.gif' />
+			<h4>Обучающие игры</h4>
+		</div>-->
+		<div class='clearboth'></div>
 </div>
+<hr>
+<div class='slide others-our-sites-on-welcome'>
+	<img src='/images/pointing-right.png'/><%= link_to 'Другие наши сайты с олимпиадами', sites_path %><img src='/images/pointing-left.png'/>
+</div> 
 
 
 
