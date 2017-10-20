@@ -408,9 +408,9 @@ class Reward < ActiveRecord::Base
     image.format "jpg"
     image.combine_options do |c|
       c.gravity 'North'
-      c.fill '#fc3400'
+      c.fill '#fe2048'
       c.pointsize '102'
-      c.draw "text 0,510 '#{prize}'"
+      c.draw "text 0,530 '#{prize}'"
 
       c.fill '#383838'
       c.pointsize '62'
@@ -435,9 +435,10 @@ class Reward < ActiveRecord::Base
       c.pointsize '50'
       c.draw "text 0,#{position+560+margin_text} '#{subject}'"
       c.pointsize '40'
-      c.draw "text -53,1630 '#{Russian::strftime(self.created_at, "%d.%m.%Y г.")}'"
+      c.draw "text -20,1630 '#{Russian::strftime(self.created_at, "%d.%m.%Y г.")}'"
       c.pointsize '36'
-      c.draw "text -20,2110 '№ J-#{self.id}'"
+      c.fill '#ffffff'
+      c.draw "text -20,2270 '№ J-#{self.id}'"
     end
     output_diploma = "./public/diplomas/diploma#{dnum}.jpg"
     image.write output_diploma
@@ -471,9 +472,9 @@ class Reward < ActiveRecord::Base
     image.format "jpg"
     image.combine_options do |c|
       c.gravity 'North'
-      c.fill '#cf4554'
+      c.fill '#2180c3'
       c.pointsize '142'
-      c.draw "text 0,310 '#{prize}'"
+      c.draw "text 0,650 '#{prize}'"
 
       c.fill '#383838'
       c.pointsize '62'
@@ -498,7 +499,7 @@ class Reward < ActiveRecord::Base
       c.pointsize '50'
       c.draw "text 0,#{position+560+margin_text} '#{subject}'"
       c.pointsize '40'
-      c.draw "text 58,1640 '#{Russian::strftime(self.created_at, "%d.%m.%Y г.")}'"
+      c.draw "text -22,1620 '#{Russian::strftime(self.created_at, "%d.%m.%Y г.")}'"
       c.pointsize '36'
       c.draw "text -20,2265 '№ J-#{self.id}'"
     end

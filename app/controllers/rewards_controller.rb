@@ -33,9 +33,9 @@ class RewardsController < ApplicationController
       when 6
          @output_diploma = @reward.diploma_number6(690, prize)
       when 7
-         @output_diploma = @reward.diploma_number7(690, prize)
+         @output_diploma = @reward.diploma_number7(720, prize)
       when 8
-         @output_diploma = @reward.diploma_number8(690, prize)
+         @output_diploma = @reward.diploma_number8(850, prize)
       when 9
          @output_diploma = @reward.diploma_number9(980, prize)
       when 10
