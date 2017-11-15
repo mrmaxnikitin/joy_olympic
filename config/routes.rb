@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   get 'sites' => 'static_pages#sites'
   get 'instruction' => 'static_pages#instruction'
   get 'contacts' => 'static_pages#contacts'
+  get 'all_emails_admin' => 'static_pages#all_emails_admin'
   get 'logout' => 'sessions#destroy'
   get 'signin' => 'sessions#new'
   get 'signup' => 'users#new'

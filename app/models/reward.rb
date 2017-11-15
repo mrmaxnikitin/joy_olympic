@@ -2,6 +2,70 @@ class Reward < ActiveRecord::Base
   belongs_to :contest
   belongs_to :user
 
+  def new_diploma (position, prize, reward_number)
+    dnum = rand(100)
+    image = MiniMagick::Image.open("./public/original_diplomas/#{reward_number}.jpg")
+    subject = ""
+    if self.contest_id == 1
+      subject = "по математике"
+    elsif self.contest_id == 2
+      subject = "по русскому языку"
+    elsif self.contest_id == 3
+      subject = "по английскому языку"
+    elsif self.contest_id == 4
+      subject = "по окружающему миру"
+    end
+
+    margin_text = -80
+    institution = self.institution
+    if institution.size > 44
+      institution_44 = institution[0, 44]
+      index_inst = institution_44.rindex(" ")
+      fp_institution = institution[0, index_inst]
+      sp_institution = institution[index_inst+1, institution.size]
+      margin_text = 0
+    end
+
+    image.resize "1654x2339"
+    image.format "jpg"
+    image.combine_options do |c|
+      c.gravity 'North'
+      c.fill '#383838'
+      c.pointsize '102'
+      c.draw "text 0,945 '#{prize}'"
+
+      c.pointsize '62'
+      c.draw "text 0,#{position} 'Награждается'"
+      c.pointsize '92'
+      c.draw "text 0,#{position+90} '#{self.name}'"
+      c.pointsize '50'
+      c.draw "text 0,#{position+240} '#{self.age}'"
+      c.pointsize '50'
+      if institution.size > 44
+        c.draw "text 0,#{position+320} '#{fp_institution}'"
+        c.draw "text 0,#{position+400} '#{sp_institution}'"
+      else
+        c.draw "text 0,#{position+320} '#{institution}'"
+      end
+      c.pointsize '50'
+      if self.prize != 0
+        c.draw "text 0,#{position+480+margin_text} 'за победу во Всероссийской олимпиаде'"
+      else
+        c.draw "text 0,#{position+480+margin_text} 'за участие во Всероссийской олимпиаде'"
+      end
+      c.pointsize '50'
+      c.draw "text 0,#{position+560+margin_text} '#{subject}'"
+      c.pointsize '36'
+      c.draw "text 8,1778 '#{Russian::strftime(self.created_at, "%d.%m.%Y г.")}'"
+      c.pointsize '36'
+      c.draw "text 0,2220 '№ J-#{self.id}'"
+    end
+    output_diploma = "./public/diplomas/diploma#{dnum}.jpg"
+    image.write output_diploma
+    return "/diplomas/diploma#{dnum}.jpg"
+  end
+
+
   def diploma_number1(position, prize)
     dnum = rand(100)
   	image = MiniMagick::Image.open("./public/original_diplomas/1.jpg")

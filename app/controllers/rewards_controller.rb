@@ -40,7 +40,10 @@ class RewardsController < ApplicationController
          @output_diploma = @reward.diploma_number9(980, prize)
       when 10
          @output_diploma = @reward.diploma_number10(690, prize)
+      else
+        @output_diploma = @reward.new_diploma(1085, prize, @reward.number)
       end
+
     end
 	end
 
