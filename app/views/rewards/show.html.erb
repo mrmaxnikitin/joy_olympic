@@ -24,7 +24,7 @@
 				<h2><%= @reward.name %></h2>
 				<h3><%= subject %></h3>
 				<% if (Time.new.utc - @reward.created_at.utc) <= 3.days %>
-					<div class='action-joy'>После приобритения диплома для Вас будет действовать акция. Узнайте подробнее <span data-toggle="modal" data-target="#action_joy">ЗДЕСЬ</span></div>
+					<div class='action-joy'>После приобретения диплома для Вас будет действовать акция. Узнайте подробнее <span data-toggle="modal" data-target="#action_joy">ЗДЕСЬ</span></div>
 				<% end %>
 			</div>
 			<div class='clearboth'></div>
