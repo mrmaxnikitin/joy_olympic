@@ -19,11 +19,6 @@ class UsersController < InheritedResources::Base
     end
   end
 
-	def edit
-	end
-	def update
-	end
-
 	def destroy
 	end
 

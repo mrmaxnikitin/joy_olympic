@@ -16,6 +16,17 @@ class TasksController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def update
+    if @task.update_attributes tasks_params
+      redirect_to task_path
+    else
+      render 'edit'
+    end
+  end
+
   def index
   	@tasks = Task.all
     render :index, formats: :json
